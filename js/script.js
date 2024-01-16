@@ -85,7 +85,7 @@ const topStudents = students.filter(({ grades }) => grades >= 70);
 console.log(topStudents);
 
 // - 2 Creo la lista con gli studenti che hanno un voto superiore al 70 e un id superiore a 120
-const bestStudents = students.filter(({ grades, id }) => grades >= 70 && id >= 120);
+const bestStudents = students.filter(({ grades, id }) => grades >= 70 && id > 120);
 console.log(bestStudents);
 
 // - 3 Creo una lista con i nomi degli studenti tutto in maiuscolo
