@@ -80,6 +80,8 @@ const students = [
     },
 ];
 
+const list = document.getElementById('list');
+
 // - 1 Creo la lista con gli studenti che hanno un voto superiore al 70
 const topStudents = students.filter(({ grades }) => grades >= 70);
 console.log(topStudents);
@@ -91,3 +93,6 @@ console.log(bestStudents);
 // - 3 Creo una lista con i nomi degli studenti tutto in maiuscolo
 const nameStudents = students.map(({ name }) => name.toUpperCase());
 console.log(nameStudents);
+
+const items = nameStudents.reduce((result, nameStudent) => result + `<li>${nameStudent}</li>`, '');
+list.innerHTML = items;
