@@ -89,6 +89,5 @@ const bestStudents = students.filter(({ grades, id }) => grades >= 70 && id > 12
 console.log(bestStudents);
 
 // - 3 Creo una lista con i nomi degli studenti tutto in maiuscolo
-const nameStudents = []
-students.filter(({ name }) => nameStudents.push(name.toUpperCase()));
+const nameStudents = students.map(({ name }) => name.toUpperCase());
 console.log(nameStudents);
