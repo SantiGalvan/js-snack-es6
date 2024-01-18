@@ -147,3 +147,49 @@ cycles.forEach(cycle => {
 
 // Stampo in console
 console.log(lightestCycle);
+
+//? SNACK 4
+
+// Creo l'array di ogetti
+const teams = [
+    {
+        name: 'Inter',
+        points: 0,
+        fouls: 0,
+    },
+    {
+        name: 'Milan',
+        points: 0,
+        fouls: 0,
+    },
+    {
+        name: 'Fiorentina',
+        points: 0,
+        fouls: 0,
+    },
+    {
+        name: 'Palermo',
+        points: 0,
+        fouls: 0,
+    },
+    {
+        name: 'Juventus',
+        points: 0,
+        fouls: 0,
+    },
+    {
+        name: 'Roma',
+        points: 0,
+        fouls: 0,
+    },
+];
+
+// Creo una funzione per generare i numeri random
+const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
+
+// Creo un ciclo forEach
+teams.forEach((team) => {
+    // Aggiungo i numeri random all'array di oggetti
+    team.points = getRandomNumber(1, 100);
+    team.fouls = getRandomNumber(1, 100);
+});
