@@ -96,3 +96,54 @@ console.log(nameStudents);
 
 const items = nameStudents.reduce((result, nameStudent) => result + `<li>${nameStudent}</li>`, '');
 list.innerHTML = items;
+
+//? SNACK 3
+
+// Creo l'array di oggetti
+const cycles = [
+    {
+        name: 'Atala',
+        weight: 40,
+    },
+    {
+        name: 'De Rosa',
+        weight: 50,
+    },
+    {
+        name: 'Garelli',
+        weight: 35,
+    },
+    {
+        name: 'Colnago',
+        weight: 45,
+    },
+    {
+        name: 'Lombardo',
+        weight: 55,
+    },
+    {
+        name: 'Fantic',
+        weight: 20,
+    },
+    {
+        name: 'Bianchi',
+        weight: 25,
+    },
+];
+
+
+// Creo un una variabile con il primo oggetto dell'array
+let lightestCycle = cycles[0];
+
+// Creo un ciclo forEach
+cycles.forEach(cycle => {
+
+    // Faccio il destructuring
+    const { weight } = cycle;
+
+    // Controllo quale bicicletta è la mesno pesante
+    if (weight < lightestCycle.weight) lightestCycle = cycle;
+});
+
+// Stampo in console
+console.log(lightestCycle);
