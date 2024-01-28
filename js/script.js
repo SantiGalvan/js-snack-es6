@@ -193,3 +193,7 @@ teams.forEach((team) => {
     team.points = getRandomNumber(1, 100);
     team.fouls = getRandomNumber(1, 100);
 });
+
+const teamStatistics = teams.map(({ name, fouls }) => ({ name, fouls }));
+
+console.log(teamStatistics);
